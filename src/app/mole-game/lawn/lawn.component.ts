@@ -1,3 +1,4 @@
+import { GameService } from './../game.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LawnComponent implements OnInit {
 
-  constructor() { }
+  public game: GameService;
+  constructor(game: GameService) {
+    this.game = game;
+  }
 
   ngOnInit() {
   }
