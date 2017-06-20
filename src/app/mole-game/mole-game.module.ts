@@ -6,6 +6,7 @@ import { GameComponent } from './game/game.component';
 import { HeaderComponent } from './header/header.component';
 import { HoleComponent } from './hole/hole.component';
 import { LawnComponent } from './lawn/lawn.component';
+import { SpeakDirective } from './speak.directive';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { LawnComponent } from './lawn/lawn.component';
   exports: [
     GameComponent
   ],
-  declarations: [GameComponent, HeaderComponent, LawnComponent, HoleComponent],
+  declarations: [GameComponent, HeaderComponent, LawnComponent, HoleComponent, SpeakDirective],
   providers: [GameService]
 })
 export class MoleGameModule { }
