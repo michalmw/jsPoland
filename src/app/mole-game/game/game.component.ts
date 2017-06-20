@@ -13,7 +13,6 @@ export class GameComponent implements OnInit {
 
   constructor(game: GameService) {
     this.game = game;
-    console.log('test', this.game.getHoles());
   }
 
   ngOnInit() {

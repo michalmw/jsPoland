@@ -15,5 +15,4 @@ export class LawnComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

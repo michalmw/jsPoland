@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { GameService } from './../game.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Hole } from './../hole';
 
 @Component({
   selector: 'sd-hole',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HoleComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  public hole: Hole;
+
+  @Output()
+  public hit = new EventEmitter();
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  getClass() {
+    return `hole ${this.hole.state}`;
   }
 
 }

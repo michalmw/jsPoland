@@ -1,3 +1,5 @@
 <div id="lawn">
-    <sd-hole *ngFor="let hole of game.getHoles()"></sd-hole>
+    <sd-hole *ngFor="let hole of game.getHoles()" 
+    [hole]="hole"
+    (hit)="game.hit($event)"></sd-hole>
   </div>
